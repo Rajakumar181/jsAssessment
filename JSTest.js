@@ -38,7 +38,7 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("Raja","Grey","Regular Fullshirt","Goldsmith")
+mintNFT("Raja","Grey","Formal","Goldsmith")
 listNFTs();
 getTotalSupply();
 
