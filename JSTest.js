@@ -9,38 +9,36 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-let nfts=[];
+const NFTs = [] 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (name,artist,year) {
-  let nft={
-    name:name,
-    artist:artist,
-    year:year
-  };
-  nfts.push(nft);
-}
+function mintNFT (_name,_eyecolor,_shirtType,_bling) {
+ const NFT ={  
+   "name":_name,
+   "eyecolor":_eyecolor,
+   "shirtType":_shirtType,
+   "bling":_bling
+ } 
+ NFTs.push(NFT);
+ console.log("Minted:"+_name);
+ }
+
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
-  for (let i=0 ; i<nfts.length;i++){
-    console.log('NFT #${i+1}');
-    console.log('Name: ${nfts[i].name}');
-    console.log('Artist: ${nfts[i].artist}');
-    console.log('Year: ${nfts[i].year}');
-    console.log('-------------');
-  }
+    for(let i=0;i<NFTs.length;i++){
+       console.log(NFTs[i]); 
+    }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-  return nfts.length;
+    console.log(NFTs.length);
 }
-mintNFTS("Raja Kumar","Anil Kumar Mahto",2001);
-mintNFTS("Rahul Kumar","Anil Kumar Mahto",2005);
-mintNFTS("Arushi","Khushbu",20017);
+
 // call your functions below this line
+mintNFT("Raja","Grey","Regular Fullshirt","Goldsmith")
 listNFTs();
-console.log('Total Supply:${getTotalSupply()}');
+getTotalSupply();
 
